@@ -24,14 +24,12 @@ function ToolTip({ heading, text, buttonName }) {
             <HtmlTooltip
                 title={
                     <React.Fragment>
-                        <Typography color="inherit">{heading}</Typography>
-                        <ul>
+                        <Typography align="center" color="inherit">{heading}</Typography>
                         {
                                 text.map(msg => {
-                                    return <li>{ msg }</li>
+                                    return <Typography variant="caption" display="block"  color="inherit">✔️ { msg }</Typography>
                             })
                         }
-                        </ul>
                     </React.Fragment>
                 }
             >

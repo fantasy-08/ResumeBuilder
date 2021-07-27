@@ -10,6 +10,7 @@ import { next, skip, back, reset } from '../components/utils/StepAction'
 // Pages in form
 import PersonalInfo from './forms/PersonalInfo';
 import Education from './forms/Education';
+import Experience from './forms/Experience';
 function PagesController() {
 
     const { stepsState, stepsDispatch } = React.useContext(StepsContext);
@@ -50,6 +51,8 @@ function PagesController() {
                 return <PersonalInfo />
             case 'Education':
                 return <Education />
+            case 'Experience':
+                return <Experience />
             default:
                 return currentState.metadata.heading
         }
