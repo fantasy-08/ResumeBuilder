@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer, createContext, useState } from "react";
+import { stepsReducer } from "./reducer/steps";
+import { resumeReducer } from "./reducer/resume";
+import { initialSteps,initialMetaData } from "./reducer/constants"
+//Components
+import Navigation from './components/steps/Navigation'
+//Pages
+import Personal from './pages/PersonalInfo'
+// created a context
+export const StepsContext = createContext();
+export const MetaDataContext = createContext();
 
 function App() {
+  const [stepsState, stepsDispatch] = useReducer(stepsReducer, initialSteps);
+  const [resumeState, resumeDispatch] = useReducer(resumeReducer, initialMetaData);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StepsContext.Provider value={{ stepsState, stepsDispatch }}>
+      <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
+        <Navigation />
+        <br/>
+        <Personal />
+      </MetaDataContext.Provider>
+    </StepsContext.Provider>
   );
 }
 
