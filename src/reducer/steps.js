@@ -11,7 +11,7 @@ const stepsReducer = (state, action) => {
             let new_state = []
             state.forEach(step => {
                 if (step.heading !== action.payload.heading)
-                    new_state.push(state)
+                    new_state.push(step)
                 else
                     new_state.push(action.payload)
             })

@@ -5,7 +5,7 @@ import { initialSteps,initialMetaData } from "./reducer/constants"
 //Components
 import Navigation from './components/steps/Navigation'
 //Pages
-import Personal from './pages/PersonalInfo'
+import PageController from './pages/PagesController'
 // created a context
 export const StepsContext = createContext();
 export const MetaDataContext = createContext();
@@ -17,8 +17,8 @@ function App() {
     <StepsContext.Provider value={{ stepsState, stepsDispatch }}>
       <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
         <Navigation />
-        <br/>
-        <Personal />
+        <br />
+          <PageController />
       </MetaDataContext.Provider>
     </StepsContext.Provider>
   );

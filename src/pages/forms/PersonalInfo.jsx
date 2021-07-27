@@ -1,11 +1,11 @@
 import React from 'react'
-import Heading from '../components/utils/PagesHeading'
+import Heading from '../../components/utils/PagesHeading'
 import { Container, Grid } from '@material-ui/core';
-import { ADD_METADATA } from '../reducer/constants'
+import { ADD_METADATA } from '../../reducer/constants'
 
-import TextField from '../components/utils/TextField';
+import TextField from '../../components/utils/TextField';
 
-import { MetaDataContext } from '../App';
+import { MetaDataContext } from '../../App';
 function PersonalInfo({ }) {
     const { resumeState, resumeDispatch } = React.useContext(MetaDataContext)
 

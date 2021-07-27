@@ -39,5 +39,6 @@ export let initialMetaData = {
         zip: '',
         country: '',
         phone: ''
-    }
+    },
+    'Education':[]
 }

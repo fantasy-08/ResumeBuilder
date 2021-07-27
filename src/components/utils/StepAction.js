@@ -1,30 +1,33 @@
 import { ADD_STEP, UPDATE_STATUS,RESET } from '../../reducer/constants'
 
 export
-function next(stepsDispatch,object) {
+    function next(stepsDispatch, metaData) {
+    metaData.completed=true
     stepsDispatch({
-        type: UPDATE_STATUS, payload: object
+        type: UPDATE_STATUS, payload: metaData
     })
 }
 
 export
-function skip(stepsDispatch,object) {
+    function skip(stepsDispatch, metaData) {
+    metaData.skipped=true
     stepsDispatch({
-        type: UPDATE_STATUS, payload: object
+        type: UPDATE_STATUS, payload: metaData
     })
 }
 
 export
-function back(stepsDispatch,object) {
+    function back(stepsDispatch, metaData) {
+    metaData.completed=false
     stepsDispatch({
-        type: UPDATE_STATUS, payload: object
+        type: UPDATE_STATUS, payload: metaData
     })
 }
 
 export
-function addStep(stepsDispatch, object) {
+function addStep(stepsDispatch, metaData) {
     stepsDispatch({
-        type: ADD_STEP, payload: object
+        type: ADD_STEP, payload: metaData
     })
 }
 
