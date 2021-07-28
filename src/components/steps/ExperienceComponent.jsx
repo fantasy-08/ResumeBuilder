@@ -41,7 +41,7 @@ function ExperienceComponent({ handleAdd }) {
     return (
         <div style={{ border: '.01rem solid grey', borderRadius: '5px', padding: '1rem', marginBottom: '.625rem' }}>
             <Grid container spacing={3} alignItems="flex-end">
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Employer'
@@ -49,7 +49,7 @@ function ExperienceComponent({ handleAdd }) {
                         value={metaData['employer']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Job Title'
@@ -57,7 +57,7 @@ function ExperienceComponent({ handleAdd }) {
                         value={metaData['role']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Start Date'
@@ -65,7 +65,7 @@ function ExperienceComponent({ handleAdd }) {
                         value={metaData['sdate']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='End Date'
@@ -73,10 +73,10 @@ function ExperienceComponent({ handleAdd }) {
                         value={metaData['edate']}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={12}>
                     <TextEditor onChange={handleTextChange} label='Job description'/>
                 </Grid>
-                <Grid item xs={2} >
+                <Grid item xs={12} md={2} >
                     <OutlineButton label="Add" handleClick={handleClick} endIcon={<AddCircleIcon />} size="small" />
                 </Grid>
             </Grid>

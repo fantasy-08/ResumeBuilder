@@ -26,7 +26,7 @@ function PersonalInfo({ }) {
             <Heading heading="Personal Information" information="Employers will use this information to contact you." />
             <br />
             <Grid container spacing={3}>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='First Name'
@@ -34,7 +34,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['fname']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Last Name'
@@ -42,7 +42,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['lname'] ? resumeState['Personal Info']['lname'] : ''}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={12}>
                     <TextField
                         handleChange={handleChange}
                         label='Address'
@@ -50,7 +50,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['address'] ? resumeState['Personal Info']['address'] : ''}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='City'
@@ -58,7 +58,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['city'] ? resumeState['Personal Info']['city'] : ''}
                     />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} md={3}>
                     <TextField
                         handleChange={handleChange}
                         label='ZIP Code'
@@ -66,7 +66,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['zip'] ? resumeState['Personal Info']['zip'] : ''}
                     />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} md={3}>
                     <TextField
                         handleChange={handleChange}
                         label='Country'
@@ -74,7 +74,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['country'] ? resumeState['Personal Info']['country'] : ''}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Email Address'
@@ -82,7 +82,7 @@ function PersonalInfo({ }) {
                         value={resumeState['Personal Info']['email'] ? resumeState['Personal Info']['email'] : ''}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Phone'

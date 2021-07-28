@@ -44,10 +44,10 @@ function Project() {
     return (
         <Container>
             <Grid container>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Heading heading="Project" information="List your coolest and best projects to showcase your skills." />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <ToolTip heading="Expert tips for you 🚧" text={writing_tips} buttonName="tips" />
                 </Grid>
             </Grid>

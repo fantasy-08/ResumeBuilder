@@ -84,14 +84,14 @@ function PagesController() {
             <br />
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <Button
                             label='Back'
                             handleClick={handleBack}
                             color="warning"
                         />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <Button
                             label='Save and Continue'
                             handleClick={handleNext}

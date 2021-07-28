@@ -18,7 +18,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
     return (
         <div style={{border:'.01rem solid grey',borderRadius:'5px',padding:'1rem',marginBottom:'.625rem'}}>
             <Grid container spacing={3} alignItems="flex-end">
-                <Grid item xs={12}>
+                <Grid item xs={12} md={12}>
                     <TextField
                         handleChange={handleChange}
                         label='School/College/University'
@@ -26,7 +26,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         value={metaData['college']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Select a degree'
@@ -34,7 +34,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         value={metaData['degree']}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                     <TextField
                         handleChange={handleChange}
                         label='Field Of Study'
@@ -42,7 +42,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         value={metaData['field']}
                     />
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={12} md={5}>
                     <TextField
                         handleChange={handleChange}
                         label='Graduation Date (Eg: July 2020)'
@@ -50,7 +50,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         value={metaData['date']}
                     />
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={12} md={5}>
                     <TextField
                         handleChange={handleChange}
                         label='Grade'
@@ -58,7 +58,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         value={metaData['grade']}
                     />
                 </Grid>
-                <Grid item xs={2} >
+                <Grid item xs={12} md={2} >
                     <OutlineButton
                         label="remove"
                         handleClick={handleClick}

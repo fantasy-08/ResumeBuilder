@@ -43,10 +43,10 @@ function Education() {
     return (
         <Container>
             <Grid container>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Heading heading="Educational Details" information="Add information about your educational background." />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <ToolTip heading="Expert tips for you 🏫" text={writing_tips} buttonName="tips" />
                 </Grid>
             </Grid>

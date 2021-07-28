@@ -32,13 +32,13 @@ function ScholaristicAchievement() {
     return (
         <Container>
             <Grid container spacing={4}>
-                <Grid item xs={8}>
+                <Grid item xs={12} md={8}>
                     <Heading heading="Scholaristic Achievement" information="Highlight your top achivement relevant to job profile." />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} md={4}>
                     <ToolTip heading="Expert tips for you 🏆" text={writing_tips} buttonName="tips" />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={12}>
                     <TextEditor onChange={addNewExperience} label='Add your Scholaristic Achievement (express in points for easy readibility)'/>
                 </Grid>
             </Grid>

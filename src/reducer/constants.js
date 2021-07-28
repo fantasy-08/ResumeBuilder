@@ -33,7 +33,13 @@ export let initialSteps= [
             completed: false,
             optional: true,
             skipped: false
-        }
+    },
+    {
+        heading: 'Review and Download',
+        completed: false,
+        optional: false
+    }
+        
 ]
 export let initialMetaData = {
     'Personal Info': {
