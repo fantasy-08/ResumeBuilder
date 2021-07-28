@@ -1,42 +1,18 @@
 import React from 'react'
 //Material
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 //util
 import TextField from '../utils/TextField'
-import TextEditor from '../utils/Editor'
 import OutlineButton from '../utils/OutlineButton'
-import AddCircleIcon from '@material-ui/icons/AddCircle';
 
-const initialState = {
-    employer: '',
-    role: '',
-    sdate: '',
-    edate: '',
-    description: ''
-}
+function ExperienceDisplay({ metaData, index, handleRemove }) {
 
-function ExperienceComponent({ handleAdd }) {
-    const [metaData, setMetaData] = React.useState(initialState)
     const handleChange = (event) => {
-        setMetaData(prev => {
-            return {
-                ...prev,
-                [event.target.name]: event.target.value
-            }
-        })
+        return null
     }
     const handleClick = () => {
-        handleAdd(metaData)
-        setMetaData(initialState)
-    }
-    const handleTextChange = (jobDescription) => {
-        setMetaData(prev => {
-            return {
-                ...prev,
-                'description': jobDescription
-            }
-        })
-        console.log(jobDescription)
+        return handleRemove(index)
     }
 
     return (
@@ -74,15 +50,31 @@ function ExperienceComponent({ handleAdd }) {
                         value={metaData['edate']}
                     />
                 </Grid>
-                <Grid item xs={12}>
-                    <TextEditor onChange={handleTextChange} label='Job description'/>
+                <Grid item xs={8}>
+                    <Typography >Job description</Typography>
+                    <div
+                        dangerouslySetInnerHTML={{ __html: metaData['description'] }}
+                        style={{
+                            border: '.01rem solid grey',
+                            borderRadius: '5px',
+                            padding: '.5rem',
+                            marginTop: '.625rem'
+                        }}
+                    />
                 </Grid>
                 <Grid item xs={2} >
-                    <OutlineButton label="Add" handleClick={handleClick} endIcon={<AddCircleIcon />} size="small" />
+                    <OutlineButton
+                        label="remove"
+                        handleClick={handleClick}
+                        endIcon={<DeleteForeverIcon />}
+                        size="large"
+                        color= 'error'
+                    />
                 </Grid>
             </Grid>
+            <br />
         </div>
     )
 }
 
-export default ExperienceComponent
+export default ExperienceDisplay

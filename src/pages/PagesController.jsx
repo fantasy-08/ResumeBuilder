@@ -24,7 +24,7 @@ function PagesController() {
         for (let i = stepsState.length - 1; i >= 0; i--) {
             let step = stepsState[i]
             if (step.completed) {
-                if (i == stepsState.length - 1) {
+                if (i === stepsState.length - 1) {
                     console.log('Done')
                 } else {
                     setCurrentState({

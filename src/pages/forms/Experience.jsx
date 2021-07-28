@@ -9,7 +9,7 @@ import { ADD_METADATA } from '../../reducer/constants'
 import { MetaDataContext } from '../../App';
 
 import ExperienceComponent from '../../components/steps/ExperienceComponent';
-import EducationDisplay from '../../components/steps/EducationDisplay';
+import ExperienceDisplay from '../../components/steps/ExperienceDisplay';
 
 const writing_tips = [
     'Your most recent or current job should be listed first. Then, work in reverse chronological order, from your newest to your oldest jobs.',
@@ -59,7 +59,7 @@ function Experience() {
             }
             {
                 resumeState.Experience.map((experience, index) => {
-                    return <EducationDisplay metaData={experience} index={index} handleRemove={removeExperience} />
+                    return <ExperienceDisplay metaData={experience} index={index} handleRemove={removeExperience} />
                 })
             }
             {

@@ -64,7 +64,7 @@ function EducationDisplay({metaData,index,handleRemove}) {
                         handleClick={handleClick}
                         endIcon={<DeleteForeverIcon />}
                         size="large"
-                        style={{ color: 'red', borderColor:'red' }} />
+                        color= 'error' />
                 </Grid>
             </Grid>
             <br/>
