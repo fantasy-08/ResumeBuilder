@@ -98,6 +98,7 @@ function PagesController() {
                                     label='Back'
                                     handleClick={handleBack}
                                     color="warning"
+                                    style={{marginRight:'100%'}}
                                 />
                         }
                     </Grid>
@@ -108,12 +109,14 @@ function PagesController() {
                                     label='Print'
                                     handleClick={handleNext}
                                     endIcon={<PrintIcon />}
+                                    style={{marginLeft:'90%'}}
                                 /> :
                                 <Button
                                     label='Save and Continue'
                                     handleClick={handleNext}
                                     endIcon={<NavigateNextIcon />}
                                     color="success"
+                                    style={{marginLeft:'61%'}}
                                 />
                         }
                     </Grid>

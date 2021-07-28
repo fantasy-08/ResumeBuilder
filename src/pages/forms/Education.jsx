@@ -47,7 +47,7 @@ function Education() {
                     <Heading heading="Educational Details" information="Add information about your educational background." />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <ToolTip heading="Expert tips for you 🏫" text={writing_tips} buttonName="tips" />
+                    <ToolTip heading="Expert tips for you 🏫" text={writing_tips} buttonName="writing tips" />
                 </Grid>
             </Grid>
 

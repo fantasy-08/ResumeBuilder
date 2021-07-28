@@ -48,7 +48,7 @@ function Project() {
                     <Heading heading="Project" information="List your coolest and best projects to showcase your skills." />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <ToolTip heading="Expert tips for you 🚧" text={writing_tips} buttonName="tips" />
+                    <ToolTip heading="Expert tips for you 🚧" text={writing_tips} buttonName="writing tips" />
                 </Grid>
             </Grid>
 

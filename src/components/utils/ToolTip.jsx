@@ -33,7 +33,7 @@ function ToolTip({ heading, text, buttonName }) {
                     </React.Fragment>
                 }
             >
-                <Button size="small" endIcon={<EmojiObjectsIcon/>}>{buttonName}</Button>
+                <Button size="small" sx={{ml:10,mt:2}} endIcon={<EmojiObjectsIcon/>}>{buttonName}</Button>
             </HtmlTooltip>
         </>
     )

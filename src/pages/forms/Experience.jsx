@@ -47,7 +47,7 @@ function Experience() {
                     <Heading heading="Experience" information="List your work experience, from the most recent to the oldest. Feel free to use our pre-written examples." />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <ToolTip heading="Expert tips for you 👨‍💻" text={writing_tips} buttonName="tips" />
+                    <ToolTip heading="Expert tips for you 👨‍💻" text={writing_tips} buttonName="writing tips" />
                 </Grid>
             </Grid>
 

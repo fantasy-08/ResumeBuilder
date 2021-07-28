@@ -36,7 +36,7 @@ function Experience() {
                     <Heading heading="SKILLS" information="Highlight 6-8 of your top skills." />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <ToolTip heading="Expert tips for you 🤹" text={writing_tips} buttonName="tips" />
+                    <ToolTip heading="Expert tips for you 🤹" text={writing_tips} buttonName="writing tips" />
                 </Grid>
                 <Grid item xs={12} md={12}>
                     <TextEditor onChange={addNewExperience} label='Add your skills as suggested in tips!'/>

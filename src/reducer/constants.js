@@ -63,6 +63,7 @@ export let initialMetaData = {
     'Experience': [],
     'Project':[],
     'Skill': '',
+    'Scholaristic Achievement':'',
     'Template':'MNITresume'
 }
 export const config = {

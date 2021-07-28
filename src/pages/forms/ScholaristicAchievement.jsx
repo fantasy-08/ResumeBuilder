@@ -19,12 +19,12 @@ const writing_tips = [
 function ScholaristicAchievement() {
     const {  resumeDispatch } = React.useContext(MetaDataContext)
     const addNewExperience = (skill) => {
-        let new_skill_metadata = skill
+        let new_Scholaristic_Achievement_metadata = skill
         resumeDispatch({
             type: ADD_METADATA,
             payload: {
-                heading: 'Skill',
-                metadata: new_skill_metadata
+                heading: 'Scholaristic Achievement',
+                metadata: new_Scholaristic_Achievement_metadata
             }
         })
     }
@@ -36,7 +36,7 @@ function ScholaristicAchievement() {
                     <Heading heading="Scholaristic Achievement" information="Highlight your top achivement relevant to job profile." />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <ToolTip heading="Expert tips for you 🏆" text={writing_tips} buttonName="tips" />
+                    <ToolTip heading="Expert tips for you 🏆" text={writing_tips} buttonName="writing tips" />
                 </Grid>
                 <Grid item xs={12} md={12}>
                     <TextEditor onChange={addNewExperience} label='Add your Scholaristic Achievement (express in points for easy readibility)'/>
