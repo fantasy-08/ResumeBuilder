@@ -4,6 +4,7 @@ import { StepsContext } from '../App';
 
 import Button from '../components/utils/Button'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import PrintIcon from '@material-ui/icons/Print';
 
 import { next, skip, back, reset } from '../components/utils/StepAction'
 
@@ -14,6 +15,9 @@ import Experience from './forms/Experience';
 import ScholaristicAchievement from './forms/ScholaristicAchievement';
 import Project from './forms/Project';
 import Skill from './forms/Skill';
+
+//resume template
+import MNITresume from './templates/MNITresume';
 
 function PagesController() {
 
@@ -63,6 +67,8 @@ function PagesController() {
                 return <Skill />
             case 'Scholaristic Achievement':
                 return <ScholaristicAchievement />
+            case 'Review and Download':
+                return <MNITresume />
             default:
                 return currentState.metadata.heading
         }
@@ -85,19 +91,31 @@ function PagesController() {
             <Container>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={6}>
-                        <Button
-                            label='Back'
-                            handleClick={handleBack}
-                            color="warning"
-                        />
+                        {
+                            currentState.index === 0 ?
+                                <></> :
+                                <Button
+                                    label='Back'
+                                    handleClick={handleBack}
+                                    color="warning"
+                                />
+                        }
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Button
-                            label='Save and Continue'
-                            handleClick={handleNext}
-                            endIcon={<NavigateNextIcon />}
-                            color="success"
-                        />
+                        {
+                            currentState.index === stepsState.length - 1 ?
+                                <Button
+                                    label='Print'
+                                    handleClick={handleNext}
+                                    endIcon={<PrintIcon />}
+                                /> :
+                                <Button
+                                    label='Save and Continue'
+                                    handleClick={handleNext}
+                                    endIcon={<NavigateNextIcon />}
+                                    color="success"
+                                />
+                        }
                     </Grid>
                 </Grid>
             </Container>

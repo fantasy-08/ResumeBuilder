@@ -10,10 +10,10 @@ import { ADD_METADATA } from '../../reducer/constants'
 import { MetaDataContext } from '../../App';
 
 const writing_tips = [
-    'Keep your summary short and straight to the point. You can always elaborate during the interview. The optimal length for a professional summary is between 50 and 100 words.   ',
-    'Tailor the summary to the job you are applying for. Show the employer exactly why you’re the best fit for this position.',
+    'Keep your achievement short and straight to the point. You can always elaborate during the interview.',
+    'Tailor the achievement to the job you are applying for. Show the employer exactly why you’re the best fit for this position.',
     'Be specific about your background, skills and goals.',
-    'Remember, the best resume summary should quickly grab recruiters’ attention by shouting out: “Hey, I’m who you are looking for!”'
+    'Remember, the best resume achievement should quickly grab recruiters’'
 ]
 
 function ScholaristicAchievement() {

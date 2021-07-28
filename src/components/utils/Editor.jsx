@@ -50,6 +50,7 @@ class MyStatefulEditor extends Component {
                     value={this.state.value}
                     onChange={this.onChange}
                     toolbarConfig={toolbarConfig}
+                    placeholder='Hi 👋 I am a Rich Text Editor to make your resume more beautiful'
                 />
             </>
         );

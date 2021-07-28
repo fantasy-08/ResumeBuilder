@@ -33,28 +33,37 @@ export let initialSteps= [
             completed: false,
             optional: true,
             skipped: false
-    },
-    {
-        heading: 'Review and Download',
-        completed: false,
-        optional: false
-    }
+        },
+        {
+            heading: 'Review and Download',
+            completed: false,
+            optional: false
+        }
         
 ]
 export let initialMetaData = {
     'Personal Info': {
         fname: '',
         lname: '',
-        address: '',
+        stream: '',
+        branch:'',
         city: '',
         zip: '',
-        country: '',
-        phone: ''
+        state: '',
+        phone: '',
+        college: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        personal: '',
+        gender: '',
+        dob:''
     },
     'Education': [],
     'Experience': [],
     'Project':[],
-    'Skill':''
+    'Skill': '',
+    'Template':'MNITresume'
 }
 export const config = {
     toolbar: {
