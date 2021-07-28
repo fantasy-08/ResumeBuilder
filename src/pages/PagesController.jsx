@@ -11,6 +11,10 @@ import { next, skip, back, reset } from '../components/utils/StepAction'
 import PersonalInfo from './forms/PersonalInfo';
 import Education from './forms/Education';
 import Experience from './forms/Experience';
+import ScholaristicAchievement from './forms/ScholaristicAchievement';
+import Project from './forms/Project';
+import Skill from './forms/Skill';
+
 function PagesController() {
 
     const { stepsState, stepsDispatch } = React.useContext(StepsContext);
@@ -53,6 +57,12 @@ function PagesController() {
                 return <Education />
             case 'Experience':
                 return <Experience />
+            case 'Project':
+                return <Project />
+            case 'Skills':
+                return <Skill />
+            case 'Scholaristic Achievement':
+                return <ScholaristicAchievement />
             default:
                 return currentState.metadata.heading
         }
@@ -73,11 +83,12 @@ function PagesController() {
             {PagePicker()}
             <br />
             <Container>
-                <Grid container spacing={12} justifyContent="center" alignItems="center">
+                <Grid container spacing={3}>
                     <Grid item xs={6}>
                         <Button
                             label='Back'
                             handleClick={handleBack}
+                            color="warning"
                         />
                     </Grid>
                     <Grid item xs={6}>
@@ -85,6 +96,7 @@ function PagesController() {
                             label='Save and Continue'
                             handleClick={handleNext}
                             endIcon={<NavigateNextIcon />}
+                            color="success"
                         />
                     </Grid>
                 </Grid>

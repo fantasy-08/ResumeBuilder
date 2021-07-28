@@ -19,6 +19,11 @@ export let initialSteps= [
             optional: false
         },
         {
+            heading: 'Project',
+            completed: false,
+            optional: false
+        },
+        {
             heading: 'Skills',
             completed: false,
             optional: false
@@ -41,7 +46,9 @@ export let initialMetaData = {
         phone: ''
     },
     'Education': [],
-    'Experience':[]
+    'Experience': [],
+    'Project':[],
+    'Skill':''
 }
 export const config = {
     toolbar: {

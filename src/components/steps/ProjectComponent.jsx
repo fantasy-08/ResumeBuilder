@@ -8,14 +8,13 @@ import OutlineButton from '../utils/OutlineButton'
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 
 const initialState = {
-    employer: '',
-    role: '',
-    sdate: '',
-    edate: '',
+    title: '',
+    stack: '',
+    date: '',
+    link: '',
     description: ''
 }
-
-function ExperienceComponent({ handleAdd }) {
+function ProjectComponent({ handleAdd }) {
     const [metaData, setMetaData] = React.useState(initialState)
     const handleChange = (event) => {
         setMetaData(prev => {
@@ -29,59 +28,58 @@ function ExperienceComponent({ handleAdd }) {
         handleAdd(metaData)
         setMetaData(initialState)
     }
-    const handleTextChange = (jobDescription) => {
+    const handleTextChange = (projectDescription) => {
         setMetaData(prev => {
             return {
                 ...prev,
-                'description': jobDescription
+                'description': projectDescription
             }
         })
     }
-
     return (
         <div style={{ border: '.01rem solid grey', borderRadius: '5px', padding: '1rem', marginBottom: '.625rem' }}>
             <Grid container spacing={3} alignItems="flex-end">
                 <Grid item xs={6}>
                     <TextField
                         handleChange={handleChange}
-                        label='Employer'
-                        name='employer'
-                        value={metaData['employer']}
+                        label='Project Name'
+                        name='title'
+                        value={metaData['title']}
                     />
                 </Grid>
                 <Grid item xs={6}>
                     <TextField
                         handleChange={handleChange}
-                        label='Job Title'
-                        name='role'
-                        value={metaData['role']}
+                        label='Worked on (date)'
+                        name='date'
+                        value={metaData['date']}
                     />
                 </Grid>
                 <Grid item xs={6}>
                     <TextField
                         handleChange={handleChange}
-                        label='Start Date'
-                        name='sdate'
-                        value={metaData['sdate']}
+                        label='Stack used summary'
+                        name='stack'
+                        value={metaData['stack']}
                     />
                 </Grid>
                 <Grid item xs={6}>
                     <TextField
                         handleChange={handleChange}
-                        label='End Date'
-                        name='edate'
-                        value={metaData['edate']}
+                        label='Project link | Demo'
+                        name='link'
+                        value={metaData['link']}
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextEditor onChange={handleTextChange} label='Job description'/>
+                    <TextEditor onChange={handleTextChange} label='Project description' />
                 </Grid>
                 <Grid item xs={2} >
-                    <OutlineButton label="Add" handleClick={handleClick} endIcon={<AddCircleIcon />} size="small" />
+                    <OutlineButton label="Add" handleClick={handleClick} endIcon={<AddCircleIcon />} size="large" />
                 </Grid>
             </Grid>
         </div>
     )
 }
 
-export default ExperienceComponent
+export default ProjectComponent
