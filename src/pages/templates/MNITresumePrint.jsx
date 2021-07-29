@@ -1,10 +1,12 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
 import { Grid, Typography, Container } from '@material-ui/core'
 //context
 import { MetaDataContext } from '../../App';
 //util
 import Table from '../../components/utils/Table'
+
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const SectionDivider = ({ topic }) => {
     const sectionStyle = {
@@ -23,17 +25,12 @@ const SectionDivider = ({ topic }) => {
     )
 }
 
-function MNITresume() {
+function MNITresumePrint() {
     const { resumeState } = React.useContext(MetaDataContext)
-    const history = useHistory();
 
     const A4 = {
-        height: '842px',
-        width: '595px',
-        /* to centre page on screen*/
         marginLeft: 'auto',
         marginRight: 'auto',
-        border: '.01rem solid grey',
         padding: '2rem',
         marginBottom: '0.625rem'
     }
@@ -51,14 +48,12 @@ function MNITresume() {
         })
         return rows
     }
-    const _exportPdf = () => {
-        history.push('/print/mnit')
-    }
 
     React.useEffect(() => {
-        if (resumeState['Print'] !== 0)
-            _exportPdf();
-    },[resumeState['Print']])
+        setTimeout(() => {
+            window.print();
+        }, 10)
+    }, [])
 
     return (
         <>
@@ -199,9 +194,8 @@ function MNITresume() {
                         </>
                 }
             </div>
-            <div style={A4}></div>
         </>
     )
 }
 
-export default MNITresume
+export default MNITresumePrint
