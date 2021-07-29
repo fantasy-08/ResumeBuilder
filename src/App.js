@@ -9,6 +9,8 @@ import { initialSteps, initialMetaData } from "./reducer/constants";
 import BuildResume from "./pages/Page/BuildReume";
 import Template from "./pages/Page/Template";
 import Landing from "./pages/Page/Landing";
+//navbar
+import Navbar from "./components/navbar/Navbar";
 
 // created a context
 export const StepsContext = createContext();
@@ -23,6 +25,7 @@ function App() {
   return (
     <StepsContext.Provider value={{ stepsState, stepsDispatch }}>
       <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Landing />

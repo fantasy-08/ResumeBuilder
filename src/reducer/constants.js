@@ -65,7 +65,7 @@ export let initialMetaData = {
     'Project':[],
     'Skill': '',
     'Scholaristic Achievement':'',
-    'Template': 'MNITresume',
+    'Template': '',
     'Print':0
 }
 

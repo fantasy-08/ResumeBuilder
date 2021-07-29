@@ -11,7 +11,7 @@ export default function SimpleAccordion({ titles, descriptions }) {
             {
                 titles.map((title, index) => {
                     return (
-                        <Accordion sx={{mb:2}}>
+                        <Accordion sx={{ mb: 2 }}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
