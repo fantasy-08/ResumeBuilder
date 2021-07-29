@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Grid } from '@material-ui/core';
-import { StepsContext } from '../App';
+import { StepsContext, MetaDataContext } from '../App';
+import { ADD_METADATA } from '../reducer/constants'
 
 import Button from '../components/utils/Button'
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -22,6 +23,7 @@ import MNITresume from './templates/MNITresume';
 function PagesController() {
 
     const { stepsState, stepsDispatch } = React.useContext(StepsContext);
+    const { resumeState, resumeDispatch } = React.useContext(MetaDataContext)
     const [currentState, setCurrentState] = React.useState({
         index: 0,
         metadata: stepsState[0]
@@ -68,7 +70,14 @@ function PagesController() {
             case 'Scholaristic Achievement':
                 return <ScholaristicAchievement />
             case 'Review and Download':
-                return <MNITresume />
+                {
+                    switch (resumeState['Template']) {
+                        case 'MNITresume':
+                            return <MNITresume />
+                        default:
+                            return resumeState['Template'] + ' not found'
+                    }
+                }
             default:
                 return currentState.metadata.heading
         }
@@ -82,6 +91,14 @@ function PagesController() {
     }
     const handleNext = () => {
         next(stepsDispatch, currentState.metadata)
+    }
+    const handlePrint = () => {
+        resumeDispatch({
+            type: ADD_METADATA, payload: {
+                'heading': 'Print',
+                'metadata': resumeState['Print'] + 1
+            }
+        })
     }
 
     return (
@@ -98,7 +115,7 @@ function PagesController() {
                                     label='Back'
                                     handleClick={handleBack}
                                     color="warning"
-                                    style={{marginRight:'100%'}}
+                                    style={{ marginRight: '100%' }}
                                 />
                         }
                     </Grid>
@@ -107,16 +124,16 @@ function PagesController() {
                             currentState.index === stepsState.length - 1 ?
                                 <Button
                                     label='Print'
-                                    handleClick={handleNext}
+                                    handleClick={handlePrint}
                                     endIcon={<PrintIcon />}
-                                    style={{marginLeft:'90%'}}
+                                    style={{ marginLeft: '90%' }}
                                 /> :
                                 <Button
                                     label='Save and Continue'
                                     handleClick={handleNext}
                                     endIcon={<NavigateNextIcon />}
                                     color="success"
-                                    style={{marginLeft:'61%'}}
+                                    style={{ marginLeft: '51%' }}
                                 />
                         }
                     </Grid>

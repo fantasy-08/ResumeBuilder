@@ -41,6 +41,7 @@ export let initialSteps= [
         }
         
 ]
+
 export let initialMetaData = {
     'Personal Info': {
         fname: '',
@@ -64,8 +65,10 @@ export let initialMetaData = {
     'Project':[],
     'Skill': '',
     'Scholaristic Achievement':'',
-    'Template':'MNITresume'
+    'Template': 'MNITresume',
+    'Print':0
 }
+
 export const config = {
     toolbar: {
         items: [
@@ -84,3 +87,4 @@ export const config = {
         ]
     }
 }
+export const templates = ['MNITresume']

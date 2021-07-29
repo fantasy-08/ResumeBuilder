@@ -4,6 +4,10 @@ import { Grid, Typography, Container } from '@material-ui/core'
 import { MetaDataContext } from '../../App';
 //util
 import Table from '../../components/utils/Table'
+import Button from '../../components/utils/Button'
+
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 const SectionDivider = ({ topic }) => {
     const sectionStyle = {
@@ -49,10 +53,28 @@ function MNITresume() {
         })
         return rows
     }
+    const _exportPdf = () => {
+        const page = document.querySelector("#capture");
+        page.style.height = 'auto'
+        page.style.border = '0px'
+        html2canvas(page).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jsPDF('p', 'pt', 'a4', false);
+            pdf.addImage(imgData, 'PNG', 0, 0, 600, 0, undefined, false);
+            pdf.save("download.pdf");
+        });
+        page.style.height = '842px'
+        page.style.border = '.01rem solid grey'
+    }
+
+    React.useEffect(() => {
+        if (resumeState['Print'] !== 0)
+            _exportPdf();
+    },[resumeState['Print']])
 
     return (
         <>
-            <div style={A4}>
+            <div style={A4} id="capture">
                 <Grid container>
                     <Grid item xs={3}>
                         <img
@@ -189,7 +211,6 @@ function MNITresume() {
                         </>
                 }
             </div>
-            <div style={A4}></div>
         </>
     )
 }
