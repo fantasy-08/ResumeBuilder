@@ -1,24 +1,39 @@
-import React, { useReducer, createContext, useState } from "react";
+import React, { useReducer, createContext } from "react";
+import { Route, Switch } from "react-router-dom";
+//context reducers
 import { stepsReducer } from "./reducer/steps";
 import { resumeReducer } from "./reducer/resume";
-import { initialSteps,initialMetaData } from "./reducer/constants"
-//Components
-import Navigation from './components/steps/Navigation'
-//Pages
-import PageController from './pages/PagesController'
+//Constant
+import { initialSteps, initialMetaData } from "./reducer/constants";
+//route DOM
+import BuildResume from "./pages/Page/BuildReume";
+import Template from "./pages/Page/Template";
+import Landing from "./pages/Page/Landing";
+
 // created a context
 export const StepsContext = createContext();
 export const MetaDataContext = createContext();
 
 function App() {
   const [stepsState, stepsDispatch] = useReducer(stepsReducer, initialSteps);
-  const [resumeState, resumeDispatch] = useReducer(resumeReducer, initialMetaData);
+  const [resumeState, resumeDispatch] = useReducer(
+    resumeReducer,
+    initialMetaData
+  );
   return (
     <StepsContext.Provider value={{ stepsState, stepsDispatch }}>
       <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
-        <Navigation />
-        <br />
-          <PageController />
+        <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/build">
+            <BuildResume />
+          </Route>
+          <Route exact path="/template">
+            <Template />
+          </Route>
+        </Switch>
       </MetaDataContext.Provider>
     </StepsContext.Provider>
   );

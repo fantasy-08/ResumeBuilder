@@ -4,7 +4,6 @@ import { Grid, Typography, Container } from '@material-ui/core'
 import { MetaDataContext } from '../../App';
 //util
 import Table from '../../components/utils/Table'
-import Button from '../../components/utils/Button'
 
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';

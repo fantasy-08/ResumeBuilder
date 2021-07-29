@@ -1,0 +1,19 @@
+img.hover-zoom {
+  height: 90%;
+  width: 90%;
+  border: 0.1rem solid black;
+}
+
+.zoom {
+  overflow: hidden;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+  width: 100%; /* I took the width from your post and placed it in css */
+  height: 100%;
+}
+
+.zoom:hover {
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
