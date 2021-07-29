@@ -11,7 +11,7 @@ import Button from "../../components/utils/Button";
 import './Template.css'
 
 const ImageHoverZoom = ({ imagePath, name }) => {
-    const {  resumeDispatch } = React.useContext(MetaDataContext)
+    const { resumeDispatch } = React.useContext(MetaDataContext)
     const history = useHistory();
 
     const handleClick = () => {
@@ -25,8 +25,10 @@ const ImageHoverZoom = ({ imagePath, name }) => {
         history.push("/build");
     }
     return (
-        <div className="zoom">
-            <img src={imagePath} alt="" className="hover-zoom" />
+        <>
+            <div className="zoom">
+                <img src={imagePath} alt="" className="hover-zoom" />
+            </div>
             <Grid container>
                 <Grid item xs={12} md={6}>
                     <Typography variant='h6' align="left" sx={{ pt: 0, mt: 0 }} gutterbottom>
@@ -44,9 +46,8 @@ const ImageHoverZoom = ({ imagePath, name }) => {
                         handleClick={handleClick}
                     />
                 </Grid>
-
             </Grid>
-        </div>
+        </>
     );
 };
 
@@ -68,7 +69,7 @@ function Template() {
                             <Grid item xs={4} md={4}
                                 className="container">
                                 <ImageHoverZoom
-                                    imagePath={`${template}.JPG`}
+                                    imagePath={`https://raw.githubusercontent.com/fantasy-08/ResumeBuilder/gh-pages/MNITresume.png`}
                                     name={template}
                                 />
                             </Grid>
