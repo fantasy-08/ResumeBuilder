@@ -6,7 +6,9 @@
   #capture {
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem;
+    height:auto;
+    padding: 0px !important;
+    border-style: none !important;
     margin-bottom: 0.625rem;
   }
 }
