@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ResumeBuilder/static/css/main.6dc86092.chunk.css",
-    "main.js": "/ResumeBuilder/static/js/main.9c50da6a.chunk.js",
-    "main.js.map": "/ResumeBuilder/static/js/main.9c50da6a.chunk.js.map",
+    "main.js": "/ResumeBuilder/static/js/main.98f28a64.chunk.js",
+    "main.js.map": "/ResumeBuilder/static/js/main.98f28a64.chunk.js.map",
     "runtime-main.js": "/ResumeBuilder/static/js/runtime-main.82ebbb03.js",
     "runtime-main.js.map": "/ResumeBuilder/static/js/runtime-main.82ebbb03.js.map",
     "static/js/2.14fded35.chunk.js": "/ResumeBuilder/static/js/2.14fded35.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.82ebbb03.js",
     "static/js/3.ac6d9695.chunk.js",
     "static/css/main.6dc86092.chunk.css",
-    "static/js/main.9c50da6a.chunk.js"
+    "static/js/main.98f28a64.chunk.js"
   ]
 }
