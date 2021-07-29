@@ -17,7 +17,9 @@ function Navbar() {
                 spacing={1}
             >
                 <Grid item xs={5}>
-                    <div style={{ height: '2.2rem', width: '9rem', margin: 0, marginLeft: '2rem' }}>
+                    <div style={{ height: '2.2rem', width: '9rem', margin: 0, marginLeft: '2rem',cursor:'pointer' }} onClick={() => {
+                        history.push('/ResumeBuilder')
+                    }}>
                         <img src='logo.svg' />
                     </div>
                 </Grid>

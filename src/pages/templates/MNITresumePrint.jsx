@@ -5,9 +5,6 @@ import { MetaDataContext } from '../../App';
 //util
 import Table from '../../components/utils/Table'
 
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-
 const SectionDivider = ({ topic }) => {
     const sectionStyle = {
         width: '100%',
