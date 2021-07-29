@@ -68,7 +68,7 @@ function Template() {
                             <Grid item xs={4} md={4}
                                 className="container">
                                 <ImageHoverZoom
-                                    imagePath={`/template/${template}.JPG`}
+                                    imagePath={`${template}.JPG`}
                                     name={template}
                                 />
                             </Grid>

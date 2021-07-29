@@ -27,7 +27,7 @@ function App() {
       <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/ResumeBuilder">
             <Landing />
           </Route>
           <Route exact path="/build">
@@ -35,6 +35,9 @@ function App() {
           </Route>
           <Route exact path="/template">
             <Template />
+          </Route>
+          <Route path="/">
+            <Landing />
           </Route>
         </Switch>
       </MetaDataContext.Provider>
