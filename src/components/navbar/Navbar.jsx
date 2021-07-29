@@ -9,7 +9,7 @@ function Navbar() {
         history.push('/template')
     }
     return (
-        <>
+        <div id="printHide">
             <Grid
                 container direction="row"
                 justifyContent="space-between"
@@ -40,7 +40,7 @@ function Navbar() {
                     <hr/>
                 </Grid>
             </Grid>
-        </>
+        </div>
     )
 }
 

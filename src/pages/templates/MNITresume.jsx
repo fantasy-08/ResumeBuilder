@@ -6,6 +6,8 @@ import { MetaDataContext } from '../../App';
 //util
 import Table from '../../components/utils/Table'
 
+import './MNITresume.css';
+
 const SectionDivider = ({ topic }) => {
     const sectionStyle = {
         width: '100%',
@@ -52,17 +54,17 @@ function MNITresume() {
         return rows
     }
     const _exportPdf = () => {
-        history.push('/print/mnit')
+        window.print();
     }
 
     React.useEffect(() => {
         if (resumeState['Print'] !== 0)
             _exportPdf();
-    },[resumeState['Print']])
+    }, [resumeState['Print']])
 
     return (
-        <>
-            <div style={A4} id="capture">
+        <div id="capturePDF">
+            <div id="capture">
                 <Grid container>
                     <Grid item xs={3}>
                         <img
@@ -199,8 +201,8 @@ function MNITresume() {
                         </>
                 }
             </div>
-            <div style={A4}></div>
-        </>
+            <div id="capture"></div>
+        </div>
     )
 }
 

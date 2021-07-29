@@ -10,7 +10,6 @@ import BuildResume from "./pages/Page/BuildReume";
 import Template from "./pages/Page/Template";
 import Landing from "./pages/Page/Landing";
 
-import MNITresumePrint from "./pages/templates/MNITresumePrint";
 //navbar
 import Navbar from "./components/navbar/Navbar";
 
@@ -27,24 +26,18 @@ function App() {
   return (
     <StepsContext.Provider value={{ stepsState, stepsDispatch }}>
       <MetaDataContext.Provider value={{ resumeState, resumeDispatch }}>
+        <Navbar />
         <Switch>
           <Route exact path="/ResumeBuilder">
-            <Navbar />
             <Landing />
           </Route>
           <Route exact path="/build">
-            <Navbar />
             <BuildResume />
           </Route>
           <Route exact path="/template">
-            <Navbar />
             <Template />
           </Route>
-          <Route exact path="/print/mnit">
-            <MNITresumePrint />
-          </Route>
           <Route path="/">
-            <Navbar />
             <Landing />
           </Route>
         </Switch>

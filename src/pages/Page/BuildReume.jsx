@@ -7,8 +7,8 @@ import PageController from '../PagesController'
 function BuildReume() {
     return (
         <>
-            <Navigation />
-            <br />
+            <Navigation  />
+            <br id="printHide" />
             <PageController />
         </>
     )

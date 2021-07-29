@@ -106,7 +106,7 @@ function PagesController() {
             {PagePicker()}
             <br />
             <Container>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} id="printHide">
                     <Grid item xs={12} md={6}>
                         {
                             currentState.index === 0 ?

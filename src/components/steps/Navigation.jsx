@@ -40,7 +40,7 @@ function Navigation() {
     }, [stepsState])
 
     return (
-        <div>
+        <div id="printHide">
             {
                 stepsBuild ?
                     <Stepper
