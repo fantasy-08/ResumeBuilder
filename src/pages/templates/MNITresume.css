@@ -19,7 +19,7 @@
 }
 
 #capture {
-  height: 842px;
+  min-height: 842px;
   width: 595px;
   /* to centre page on screen*/
   margin-left: auto;
@@ -37,6 +37,6 @@
   margin-top: 0.225rem;
 }
 
-#sectionStyle .topic{
-    margin-left: 1rem;
+#sectionStyle .topic {
+  margin-left: 1rem;
 }

@@ -106,8 +106,14 @@ function PagesController() {
             {PagePicker()}
             <br />
             <Container>
-                <Grid container spacing={3} id="printHide">
-                    <Grid item xs={12} md={6}>
+                <Grid
+                    container
+                    spacing={1}
+                    id="printHide"
+                    justifyContent="space-between"
+                    alignItems="center"
+                >
+                    <Grid item xs={12} md={2}>
                         {
                             currentState.index === 0 ?
                                 <></> :
@@ -115,25 +121,28 @@ function PagesController() {
                                     label='Back'
                                     handleClick={handleBack}
                                     color="warning"
-                                    style={{ marginRight: '100%' }}
+                                    fullWidth
+                                    disableRipple={ true}
                                 />
                         }
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={4}>
                         {
                             currentState.index === stepsState.length - 1 ?
                                 <Button
                                     label='Print'
                                     handleClick={handlePrint}
                                     endIcon={<PrintIcon />}
-                                    style={{ marginLeft: '90%' }}
+                                    fullWidth
+                                    disableRipple={ true}
                                 /> :
                                 <Button
                                     label='Save and Continue'
                                     handleClick={handleNext}
                                     endIcon={<NavigateNextIcon />}
                                     color="success"
-                                    style={{ marginLeft: '51%' }}
+                                    fullWidth
+                                    disableRipple={ true}
                                 />
                         }
                     </Grid>

@@ -181,7 +181,6 @@ function MNITresume() {
                         </>
                 }
             </div>
-            <div id="capture"></div>
         </div>
     )
 }
