@@ -1,5 +1,4 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
 import { Grid, Typography, Container } from '@material-ui/core'
 //context
 import { MetaDataContext } from '../../App';
@@ -9,17 +8,10 @@ import Table from '../../components/utils/Table'
 import './MNITresume.css';
 
 const SectionDivider = ({ topic }) => {
-    const sectionStyle = {
-        width: '100%',
-        height: '3%',
-        background: 'lightgrey',
-        marginBottom: '0.225rem',
-        marginTop: '0.225rem'
-    }
     return (
         <>
-            <div style={sectionStyle}>
-                <Typography variant='subtitle1' style={{ marginLeft: '1rem' }}><b>{topic}</b></Typography>
+            <div id="sectionStyle">
+                <Typography variant='subtitle1' className="topic"><b>{topic}</b></Typography>
             </div>
         </>
     )
@@ -27,18 +19,6 @@ const SectionDivider = ({ topic }) => {
 
 function MNITresume() {
     const { resumeState } = React.useContext(MetaDataContext)
-    const history = useHistory();
-
-    const A4 = {
-        height: '842px',
-        width: '595px',
-        /* to centre page on screen*/
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        border: '.01rem solid grey',
-        padding: '2rem',
-        marginBottom: '0.625rem'
-    }
 
     const generateRows = () => {
         const rows = []
