@@ -7,6 +7,8 @@ import Table from '../../components/utils/Table'
 
 import './MNITresume.css';
 
+import logo from '../../images/MNITLOGO.png'
+
 const SectionDivider = ({ topic }) => {
     return (
         <>
@@ -48,7 +50,7 @@ function MNITresume() {
                 <Grid container>
                     <Grid item xs={3}>
                         <img
-                            src='https://raw.githubusercontent.com/fantasy-08/ResumeBuilder/gh-pages/MNITLOGO.png'
+                            src={logo}
                             width="135rem"
                             height="135rem"
                         />

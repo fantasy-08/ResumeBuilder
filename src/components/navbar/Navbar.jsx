@@ -3,6 +3,8 @@ import { Grid} from '@material-ui/core'
 import Button from '../utils/Button';
 import { useHistory } from "react-router-dom";
 
+import logo from '../../images/logo.svg';
+
 function Navbar() {
     const history = useHistory();
     const handleBuild = () => {
@@ -20,7 +22,7 @@ function Navbar() {
                     <div style={{ height: '2.2rem', width: '9rem', margin: 0, marginLeft: '2rem',cursor:'pointer' }} onClick={() => {
                         history.push('/ResumeBuilder')
                     }}>
-                        <img src='logo.svg' />
+                        <img src={logo} />
                     </div>
                 </Grid>
                 <Grid item xs={3}>
